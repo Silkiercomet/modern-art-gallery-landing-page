@@ -102,7 +102,7 @@ a.btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   background-color: var(--Gold);
   padding: 20px;
 
@@ -131,7 +131,9 @@ a.btn {
 .hero__title, .hero__content{
     padding: 0 20px;
 }
-
+.tablet__header_only{
+  display: none;
+}
 /* hero */
 
 /* grid */
@@ -195,3 +197,36 @@ footer{
 }
 
 /* footer */
+
+@media screen and (min-width:720px) {
+  .hero{
+    flex-direction: row;
+    max-width: 100%;
+  }
+  .hero div{
+    min-width: 50%;
+    flex: 1;
+  }
+  .tablet__header_only{
+    display: block;
+  }
+  .hero__title{
+    display: none;
+  }
+  .hero div .hero__image {
+    /*work in progress*/
+    min-height: 90vmax;
+    width: 100%;
+    flex: 2;
+    background-position:  left;
+    background-size: cover;
+    background-image: url(images/tablet/image-hero@2x.jpg);
+
+  }
+  .hero__content{
+    position: relative;
+    z-index: 10;
+
+    margin-left: -60px;
+  }
+}
