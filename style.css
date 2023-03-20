@@ -227,8 +227,13 @@ footer{
     position: relative;
     z-index: 10;
 
+    opacity: 0;
+    transition: 800ms ease-in-out;
+    transform: translateX(30px);
     margin-left: -60px;
   }
+
+
 
   /* grid */
 
@@ -264,7 +269,10 @@ footer{
   
   padding: 50px 30px;
 }
-
+.grid__para{
+  transition: 500ms ease-in-out;
+  opacity: 0;
+}
 
 /* grid */
 
@@ -296,6 +304,11 @@ footer figure {
 }
 
 /* footer */
+
+.show{
+  opacity: 1;
+  transform: translateX(0);
+}
 }
 
 @media screen and (min-width:1200px) {
