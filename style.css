@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap");
-:root{
-    --AlmostBlack: hsl(0, 0%, 8%);
---Gold: hsl(24, 56%, 63%);
---DarkGrey: hsl(0, 0%, 27%);
+:root {
+  --AlmostBlack: hsl(0, 0%, 8%);
+  --Gold: hsl(24, 56%, 63%);
+  --DarkGrey: hsl(0, 0%, 27%);
 }
 /*
   1. Use a more-intuitive box-sizing model.
@@ -93,19 +93,18 @@ a.btn {
   text-transform: uppercase;
   letter-spacing: 2.2px;
 }
-.btn__text{
+.btn__text {
   background-color: var(--AlmostBlack);
   color: white;
   padding: 20px;
 }
-.btn__arrow{
+.btn__arrow {
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: var(--Gold);
   padding: 20px;
-
 }
 /* button hero */
 
@@ -128,24 +127,25 @@ a.btn {
   background-position: center;
   background-repeat: no-repeat;
 }
-.hero__title, .hero__content{
-    padding: 0 20px;
+.hero__title,
+.hero__content {
+  padding: 0 20px;
 }
-.tablet__header_only{
+.tablet__header_only {
   display: none;
 }
 /* hero */
 
 /* grid */
 
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 1fr;
   padding: 0 20px;
   grid-gap: 20px;
   margin-top: 100px;
 }
-.grid__ilustration{
+.grid__ilustration {
   min-height: 400px;
   width: 100%;
 
@@ -153,17 +153,17 @@ a.btn {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.grid__ilustration:nth-child(1){
+.grid__ilustration:nth-child(1) {
   background-image: url(images/mobile/image-grid-1@2x.jpg);
 }
-.grid__ilustration:nth-child(3){
+.grid__ilustration:nth-child(3) {
   background-image: url(images/mobile/image-grid-2@2x.jpg);
 }
-.grid__ilustration:nth-child(4){
+.grid__ilustration:nth-child(4) {
   background-image: url(images/mobile/image-grid-3@2x.jpg);
   min-height: 280px;
 }
-.grid .grid__para:nth-child(5){
+.grid .grid__para:nth-child(5) {
   background-color: var(--AlmostBlack);
   color: white;
   padding: 50px 20px;
@@ -173,7 +173,7 @@ a.btn {
 
 /* footer */
 
-footer{
+footer {
   display: flex;
   flex-direction: column;
   row-gap: 35px;
@@ -182,10 +182,10 @@ footer{
   padding: 50px 40px;
   background-color: var(--AlmostBlack);
 }
-.footer__description{
+.footer__description {
   color: white;
 }
-.footer__socialmedia{
+.footer__socialmedia {
   display: flex;
   align-items: center;
   padding: 0;
@@ -198,19 +198,19 @@ footer{
 
 /* footer */
 
-@media screen and (min-width:720px) {
-  .hero{
+@media screen and (min-width: 720px) {
+  .hero {
     flex-direction: row;
     max-width: 100%;
   }
-  .hero div{
+  .hero div {
     min-width: 50%;
     flex: 1;
   }
-  .tablet__header_only{
+  .tablet__header_only {
     display: block;
   }
-  .hero__title{
+  .hero__title {
     display: none;
   }
   .hero div .hero__image {
@@ -218,12 +218,11 @@ footer{
     min-height: 100vh;
     width: 100%;
     flex: 2;
-    background-position:  left;
+    background-position: left;
     background-size: cover;
     background-image: url(images/tablet/image-hero@2x.jpg);
-
   }
-  .hero__content{
+  .hero__content {
     position: relative;
     z-index: 10;
 
@@ -233,100 +232,94 @@ footer{
     margin-left: -60px;
   }
 
+  /* grid */
 
+  .grid {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    grid-template-rows: 1fr 0.7fr 0.7fr;
+  }
+
+  .grid__ilustration:nth-child(1) {
+    background-image: url(images/tablet/image-grid-1@2x.jpg);
+    grid-area: 1 / 2 / 1 / span 2;
+  }
+  .grid .grid__para:nth-child(2) {
+    grid-area: 1 / 1 / 1 / 1;
+    padding: 50px 30px;
+  }
+  .grid__ilustration:nth-child(3) {
+    background-image: url(images/tablet/image-grid-2@2x.jpg);
+    grid-area: 2 / 1 / span 2 / span 2;
+  }
+  .grid__ilustration:nth-child(4) {
+    background-image: url(images/tablet/image-grid-3@2x.jpg);
+    min-height: 280px;
+  }
+  .grid .grid__para:nth-child(5) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 30px;
+  }
+  .grid__para {
+    transition: 500ms ease-in-out;
+    opacity: 0;
+  }
 
   /* grid */
 
-.grid{
-  display: grid;
+  /* footer */
 
-  grid-template-columns: 1.3fr 0.7fr 1fr;
-  grid-template-rows: 1fr 0.7fr 0.7fr;
-}
+  footer {
+    display: flex;
+    flex-direction: row;
+    row-gap: 35px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  footer > * {
+    flex: 1;
+  }
+  footer figure {
+    flex: 0.7;
+  }
+  .footer__description {
+    flex: 1.3;
+  }
+  .footer__socialmedia {
+    flex: 1;
+  }
+  .footer__socialmedia li:nth-child(1) {
+    margin-left: auto;
+  }
 
-.grid__ilustration:nth-child(1){
-  background-image: url(images/tablet/image-grid-1@2x.jpg);
-  grid-area: 1 / 2 / 1 / span 2;
-}
-.grid .grid__para:nth-child(2){
-  grid-area: 1 / 1 / 1 / 1;
-  padding: 50px 30px;
-}
-.grid__ilustration:nth-child(3){
-  background-image: url(images/tablet/image-grid-2@2x.jpg);
-  grid-area: 2 / 1 / span 2/ span 2;
-}
-.grid__ilustration:nth-child(4){
-  background-image: url(images/tablet/image-grid-3@2x.jpg);
-  min-height: 280px;
+  /* footer */
 
-}
-.grid .grid__para:nth-child(5){
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  padding: 50px 30px;
-}
-.grid__para{
-  transition: 500ms ease-in-out;
-  opacity: 0;
+  .show {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* grid */
-
-/* footer */
-
-footer{
-  display: flex;
-  flex-direction: row;
-  row-gap: 35px;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-}
-footer > * {
-  flex: 1;
-
-}
-footer figure {
-  flex: 0.7;
-}
-.footer__description{
-  flex: 1.3;
-}
-.footer__socialmedia{
-  flex: 1;
-}
-.footer__socialmedia li:nth-child(1){
-  margin-left: auto;
-}
-
-/* footer */
-
-.show{
-  opacity: 1;
-  transform: translateX(0);
-}
-}
-
-@media screen and (min-width:1200px) {
-  .hero div:nth-child(1){
+@media screen and (min-width: 1200px) {
+  .hero div:nth-child(1) {
     display: flex;
     flex-direction: row-reverse;
     min-width: 40%;
   }
-  .tablet__header_only{
+  .tablet__header_only {
     display: none;
   }
-  .hero__title{
+  .hero__title {
     display: flex;
     background-color: var(--AlmostBlack);
     mix-blend-mode: difference;
     color: rgb(255, 255, 255);
     position: relative;
-
   }
   h1[data-reverse-color] {
     position: absolute;
@@ -338,19 +331,17 @@ footer figure {
   .hero div .hero__image {
     /*work in progress*/
 
-    background-position:  center;
+    background-position: center;
     background-size: cover;
     background-image: url(images/desktop/image-hero@2x.jpg);
-
   }
-  .hero__content{
-
+  .hero__content {
     flex-direction: column;
   }
-  .hero__content p{
+  .hero__content p {
     max-width: 30ch;
   }
-  .grid{
+  .grid {
     max-width: 1200px;
     margin-inline: auto;
   }
