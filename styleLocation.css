@@ -1,0 +1,76 @@
+:root {
+    --AlmostBlack: hsl(0, 0%, 8%);
+    --Gold: hsl(24, 56%, 63%);
+    --DarkGrey: hsl(0, 0%, 27%);
+  }
+.footer__location{
+    background-color: var(--Gold);
+    margin-top: 0;
+
+}
+.footer__location > * {
+    color: var(--AlmostBlack);
+}
+a.btn{
+    margin: 0;
+}
+.location{
+    min-height: 70vh;
+    background-image: url("./images/mobile/image-map@2x.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.ourlocation{
+    background-color: var(--AlmostBlack);
+    color: var(--DarkGrey);
+    padding: 50px 25px;
+}
+.ourlocation h1{
+    color: white;
+    text-transform: uppercase;
+}
+.ourlocation__area > :last-child{
+    margin-top: 25px;
+}
+.ourlocation__area-street{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--Gold);
+}
+
+@media screen and (min-width:720px) {
+    .location{
+
+        background-image: url("./images/tablet/image-map@2x.jpg");
+
+    }
+}
+@media screen and (min-width:1200px) {
+    .wrapper__footer{
+        background-color: var(--Gold);
+    }
+    .location{
+        background-image: url("./images/desktop/image-map@2x.jpg");
+    }
+    .ourlocation{
+        min-height: 80vh;
+    }
+    .ourlocation__wrapper{
+        display: flex;
+
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    .ourlocation__wrapper > * {
+        flex: 1;
+    }
+    .ourlocation__area-city{
+        margin-top: 25px;
+    }
+    .footer__location{
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+}

@@ -345,4 +345,15 @@ footer {
     max-width: 1200px;
     margin-inline: auto;
   }
+  .wrapper__footer{
+    background-color: var(--AlmostBlack);
+  }
+  footer{
+    padding-inline: 0;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  .grid{
+    padding: 0;
+  }
 }
